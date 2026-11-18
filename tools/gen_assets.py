@@ -1,10 +1,10 @@
-"""Generates the Storage Linker blockstate and block models from Create's fluid pipe models.
+"""Generates the Item Pipe and Pump blockstates and models from Create's pipe and pump models.
 
 Usage: python tools/gen_assets.py <path to create-*.jar>
 
-The linker reuses Create's fluid pipe geometry: every model here is a child of one of Create's
-fluid pipe models that only swaps the textures for the grey linker textures. The blockstate is
-Create's fluid_pipe multipart with each connection's true/false mapped onto the linker's
+The Item Pipe reuses Create's fluid pipe geometry: every model here is a child of one of Create's
+fluid pipe models that only swaps the textures for the blue Item Pipe textures. The blockstate is
+Create's fluid_pipe multipart with each connection's true/false mapped onto the Item Pipe's
 none / pipe / storage sides, plus:
   * an arm (connection/<dir>) on every connected side,
   * a rim (rim/<dir>) on every side touching a storage block,
@@ -17,10 +17,10 @@ import zipfile
 from itertools import product
 from pathlib import Path
 
-MOD_ID = "storagemerger"
-BLOCK = "storage_linker"
-TEX_CONNECTED = f"{MOD_ID}:block/linker_pipes_connected"
-TEX_PIPES = f"{MOD_ID}:block/linker_pipes"
+MOD_ID = "connectedstorage"
+BLOCK = "item_pipe"
+TEX_CONNECTED = f"{MOD_ID}:block/item_pipe_connected"
+TEX_PIPES = f"{MOD_ID}:block/item_pipe"
 DIRECTIONS = ["north", "east", "south", "west", "up", "down"]
 CONNECTED = "pipe|storage"
 NONE = "none"
@@ -56,6 +56,30 @@ def cap_model(axis: str) -> str:
         "elements": [{"from": [4, 4, 4], "to": [12, 12, 12], "faces": faces}],
     })
     return f"{MOD_ID}:block/{BLOCK}/cap_{axis}"
+
+
+PUMP = "item_pump"
+TEX_PUMP = f"{MOD_ID}:block/item_pump"
+# Same rotations as Create's mechanical_pump blockstate.
+PUMP_ROTATIONS = {
+    "down": {"x": 180}, "east": {"x": 90, "y": 90}, "north": {"x": 90},
+    "south": {"x": 90, "y": 180}, "up": {}, "west": {"x": 90, "y": 270},
+}
+
+
+def pump_assets() -> None:
+    """The pump reuses Create's Mechanical Pump models with the blue, arrow-less texture.
+
+    The spinning cog is Create's own partial model, drawn by the block entity renderer.
+    """
+    write_json(ASSETS / "models/block" / PUMP / "block.json",
+               {"parent": "create:block/mechanical_pump/block", "textures": {"4": TEX_PUMP, "particle": TEX_PUMP}})
+    write_json(ASSETS / "models/block" / PUMP / "item.json",
+               {"parent": "create:block/mechanical_pump/item", "textures": {"4": TEX_PUMP, "particle": TEX_PUMP}})
+    write_json(ASSETS / "models/item" / f"{PUMP}.json", {"parent": f"{MOD_ID}:block/{PUMP}/item"})
+    variants = {f"facing={facing}": {"model": f"{MOD_ID}:block/{PUMP}/block", **rotation}
+                for facing, rotation in PUMP_ROTATIONS.items()}
+    write_json(ASSETS / "blockstates" / f"{PUMP}.json", {"variants": variants})
 
 
 def main() -> None:
@@ -95,6 +119,7 @@ def main() -> None:
         multipart.append({"when": {d: "storage"}, "apply": {"model": rim}})
 
     write_json(ASSETS / "blockstates" / f"{BLOCK}.json", {"multipart": multipart})
+    pump_assets()
     item = child_model("item", "create:block/fluid_pipe/item", {"1": TEX_PIPES, "particle": TEX_PIPES})
     write_json(ASSETS / "models/item" / f"{BLOCK}.json", {"parent": item})
     print(f"wrote {len(multipart)} multipart entries")

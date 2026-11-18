@@ -1,7 +1,0 @@
-{
-  "parent": "create:block/fluid_pipe/connection/west",
-  "textures": {
-    "0": "storagemerger:block/linker_pipes",
-    "particle": "storagemerger:block/linker_pipes"
-  }
-}

@@ -88,6 +88,8 @@ dependencies {
     implementation("com.simibubi.create:create-${minecraft_version}:${create_version}") { transitive = false }
     implementation("net.createmod.ponder:ponder-neoforge:${ponder_version}") { transitive = false }
     compileOnly("com.tterrag.registrate:Registrate:${registrate_version}")
+    // Flywheel ships inside Create's jar; compile against it for the pump's spinning-cog visual.
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}") { transitive = false }
 
     // Create: Connected is an optional runtime integration (Item Silo). Nothing compiles against it.
     localRuntime("maven.modrinth:create-connected:${create_connected_version}") { transitive = false }

@@ -1,0 +1,7 @@
+{
+  "parent": "create:block/fluid_pipe/rim/east",
+  "textures": {
+    "0": "connectedstorage:block/item_pipe",
+    "particle": "connectedstorage:block/item_pipe"
+  }
+}

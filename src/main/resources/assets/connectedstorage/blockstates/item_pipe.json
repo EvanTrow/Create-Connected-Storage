@@ -1,0 +1,628 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "down": "none",
+        "north": "none",
+        "south": "pipe|storage",
+        "up": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/lu_x"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "north": "pipe|storage",
+        "south": "none",
+        "up": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/ru_x"
+      }
+    },
+    {
+      "when": {
+        "down": "pipe|storage",
+        "north": "none",
+        "south": "pipe|storage",
+        "up": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/ld_x"
+      }
+    },
+    {
+      "when": {
+        "down": "pipe|storage",
+        "north": "pipe|storage",
+        "south": "none",
+        "up": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/rd_x"
+      }
+    },
+    {
+      "when": {
+        "down": "pipe|storage",
+        "north": "none",
+        "south": "none",
+        "up": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/ud_x"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "north": "none",
+        "south": "none",
+        "up": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/u_x"
+      }
+    },
+    {
+      "when": {
+        "down": "pipe|storage",
+        "north": "none",
+        "south": "none",
+        "up": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/d_x"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "north": "pipe|storage",
+        "south": "pipe|storage",
+        "up": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/lr_x"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "north": "none",
+        "south": "pipe|storage",
+        "up": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/l_x"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "north": "pipe|storage",
+        "south": "none",
+        "up": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/r_x"
+      }
+    },
+    {
+      "when": {
+        "east": "pipe|storage",
+        "north": "none",
+        "south": "pipe|storage",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/lu_y"
+      }
+    },
+    {
+      "when": {
+        "east": "none",
+        "north": "none",
+        "south": "pipe|storage",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/ru_y"
+      }
+    },
+    {
+      "when": {
+        "east": "pipe|storage",
+        "north": "pipe|storage",
+        "south": "none",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/ld_y"
+      }
+    },
+    {
+      "when": {
+        "east": "none",
+        "north": "pipe|storage",
+        "south": "none",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/rd_y"
+      }
+    },
+    {
+      "when": {
+        "east": "none",
+        "north": "pipe|storage",
+        "south": "pipe|storage",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/ud_y"
+      }
+    },
+    {
+      "when": {
+        "east": "none",
+        "north": "none",
+        "south": "pipe|storage",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/u_y"
+      }
+    },
+    {
+      "when": {
+        "east": "none",
+        "north": "pipe|storage",
+        "south": "none",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/d_y"
+      }
+    },
+    {
+      "when": {
+        "east": "pipe|storage",
+        "north": "none",
+        "south": "none",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/lr_y"
+      }
+    },
+    {
+      "when": {
+        "east": "pipe|storage",
+        "north": "none",
+        "south": "none",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/l_y"
+      }
+    },
+    {
+      "when": {
+        "east": "none",
+        "north": "none",
+        "south": "none",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/r_y"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "east": "pipe|storage",
+        "up": "pipe|storage",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/lu_z"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "east": "none",
+        "up": "pipe|storage",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/ru_z"
+      }
+    },
+    {
+      "when": {
+        "down": "pipe|storage",
+        "east": "pipe|storage",
+        "up": "none",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/ld_z"
+      }
+    },
+    {
+      "when": {
+        "down": "pipe|storage",
+        "east": "none",
+        "up": "none",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/rd_z"
+      }
+    },
+    {
+      "when": {
+        "down": "pipe|storage",
+        "east": "none",
+        "up": "pipe|storage",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/ud_z"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "east": "none",
+        "up": "pipe|storage",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/u_z"
+      }
+    },
+    {
+      "when": {
+        "down": "pipe|storage",
+        "east": "none",
+        "up": "none",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/d_z"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "east": "pipe|storage",
+        "up": "none",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/lr_z"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "east": "pipe|storage",
+        "up": "none",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/l_z"
+      }
+    },
+    {
+      "when": {
+        "down": "none",
+        "east": "none",
+        "up": "none",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/r_z"
+      }
+    },
+    {
+      "when": {
+        "up": "none",
+        "down": "none",
+        "north": "none",
+        "south": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_x"
+      }
+    },
+    {
+      "when": {
+        "up": "none",
+        "down": "pipe|storage",
+        "north": "pipe|storage",
+        "south": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_x"
+      }
+    },
+    {
+      "when": {
+        "up": "pipe|storage",
+        "down": "none",
+        "north": "pipe|storage",
+        "south": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_x"
+      }
+    },
+    {
+      "when": {
+        "up": "pipe|storage",
+        "down": "pipe|storage",
+        "north": "none",
+        "south": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_x"
+      }
+    },
+    {
+      "when": {
+        "up": "pipe|storage",
+        "down": "pipe|storage",
+        "north": "pipe|storage",
+        "south": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_x"
+      }
+    },
+    {
+      "when": {
+        "up": "pipe|storage",
+        "down": "pipe|storage",
+        "north": "pipe|storage",
+        "south": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_x"
+      }
+    },
+    {
+      "when": {
+        "north": "none",
+        "south": "none",
+        "east": "none",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_y"
+      }
+    },
+    {
+      "when": {
+        "north": "none",
+        "south": "pipe|storage",
+        "east": "pipe|storage",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_y"
+      }
+    },
+    {
+      "when": {
+        "north": "pipe|storage",
+        "south": "none",
+        "east": "pipe|storage",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_y"
+      }
+    },
+    {
+      "when": {
+        "north": "pipe|storage",
+        "south": "pipe|storage",
+        "east": "none",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_y"
+      }
+    },
+    {
+      "when": {
+        "north": "pipe|storage",
+        "south": "pipe|storage",
+        "east": "pipe|storage",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_y"
+      }
+    },
+    {
+      "when": {
+        "north": "pipe|storage",
+        "south": "pipe|storage",
+        "east": "pipe|storage",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_y"
+      }
+    },
+    {
+      "when": {
+        "up": "none",
+        "down": "none",
+        "east": "none",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_z"
+      }
+    },
+    {
+      "when": {
+        "up": "none",
+        "down": "pipe|storage",
+        "east": "pipe|storage",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_z"
+      }
+    },
+    {
+      "when": {
+        "up": "pipe|storage",
+        "down": "none",
+        "east": "pipe|storage",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_z"
+      }
+    },
+    {
+      "when": {
+        "up": "pipe|storage",
+        "down": "pipe|storage",
+        "east": "none",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_z"
+      }
+    },
+    {
+      "when": {
+        "up": "pipe|storage",
+        "down": "pipe|storage",
+        "east": "pipe|storage",
+        "west": "none"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_z"
+      }
+    },
+    {
+      "when": {
+        "up": "pipe|storage",
+        "down": "pipe|storage",
+        "east": "pipe|storage",
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/cap_z"
+      }
+    },
+    {
+      "when": {
+        "north": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/connection_north"
+      }
+    },
+    {
+      "when": {
+        "north": "storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/rim_north"
+      }
+    },
+    {
+      "when": {
+        "east": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/connection_east"
+      }
+    },
+    {
+      "when": {
+        "east": "storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/rim_east"
+      }
+    },
+    {
+      "when": {
+        "south": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/connection_south"
+      }
+    },
+    {
+      "when": {
+        "south": "storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/rim_south"
+      }
+    },
+    {
+      "when": {
+        "west": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/connection_west"
+      }
+    },
+    {
+      "when": {
+        "west": "storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/rim_west"
+      }
+    },
+    {
+      "when": {
+        "up": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/connection_up"
+      }
+    },
+    {
+      "when": {
+        "up": "storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/rim_up"
+      }
+    },
+    {
+      "when": {
+        "down": "pipe|storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/connection_down"
+      }
+    },
+    {
+      "when": {
+        "down": "storage"
+      },
+      "apply": {
+        "model": "connectedstorage:block/item_pipe/rim_down"
+      }
+    }
+  ]
+}

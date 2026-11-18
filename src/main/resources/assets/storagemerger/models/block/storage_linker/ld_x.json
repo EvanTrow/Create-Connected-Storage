@@ -1,7 +1,0 @@
-{
-  "parent": "create:block/fluid_pipe/ld_x",
-  "textures": {
-    "0": "storagemerger:block/linker_pipes_connected",
-    "particle": "storagemerger:block/linker_pipes"
-  }
-}

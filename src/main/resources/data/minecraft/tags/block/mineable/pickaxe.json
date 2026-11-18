@@ -1,5 +1,6 @@
 {
   "values": [
-    "storagemerger:storage_linker"
+    "connectedstorage:item_pipe",
+    "connectedstorage:item_pump"
   ]
 }

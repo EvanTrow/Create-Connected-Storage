@@ -1,0 +1,15 @@
+{
+  "block.connectedstorage.item_pipe": "Item Pipe",
+  "block.connectedstorage.item_pipe.tooltip.summary": "Carries an _Item Pump_'s link to _Item Vaults_ and _Item Silos_. A pump reaches _1 pipe block per 16 RPM_, up to 16.",
+  "block.connectedstorage.item_pipe.tooltip.condition1": "When part of a pumped network",
+  "block.connectedstorage.item_pipe.tooltip.behaviour1": "Every storage the pipes and pumps reach shares _one inventory_. Pipes beyond a pump's reach, or without a running pump, do nothing.",
+  "block.connectedstorage.item_pump": "Item Pump",
+  "block.connectedstorage.item_pump.tooltip.summary": "Merges the _Item Vaults_ and _Item Silos_ connected to it into _one shared inventory_. Connects on both ends, directly to storages or through _Item Pipes_.",
+  "block.connectedstorage.item_pump.tooltip.condition1": "When powered",
+  "block.connectedstorage.item_pump.tooltip.behaviour1": "Reaches _1 pipe block per 16 RPM_, up to _16 at 256 RPM_. Funnels, chutes and packagers on _any_ reached storage can reach _every_ reached storage. Use another pump to go further.",
+  "block.connectedstorage.item_pump.tooltip.condition2": "When stopped or below 16 RPM",
+  "block.connectedstorage.item_pump.tooltip.behaviour2": "The storages split apart again. Items stay where they are.",
+  "connectedstorage.goggles.pump": "Storage Link:",
+  "connectedstorage.goggles.pump.too_slow": "Needs at least %s RPM",
+  "connectedstorage.goggles.pump.reach": "Reach: %s / %s pipe blocks"
+}

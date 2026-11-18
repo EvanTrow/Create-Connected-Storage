@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "tech.trowbridge.connectedstorage.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ItemSiloBlockEntityMixin",
+    "ItemVaultBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
