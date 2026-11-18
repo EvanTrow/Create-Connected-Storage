@@ -453,6 +453,40 @@ public class LinkingGameTests {
     }
 
     // ---------------------------------------------------------------------------------------------------------
+    // Ponder
+
+    /** Every block in the Ponder schematic must parse to exactly the state written (no unknown ids or values). */
+    @GameTest(template = EMPTY)
+    public static void ponderSchematicBlocksResolve(GameTestHelper helper) {
+        String path = "/assets/connectedstorage/ponder/item_pump.nbt";
+        try (java.io.InputStream in = LinkingGameTests.class.getResourceAsStream(path)) {
+            check(in != null, "missing " + path);
+            net.minecraft.nbt.CompoundTag root = net.minecraft.nbt.NbtIo.readCompressed(in,
+                    net.minecraft.nbt.NbtAccounter.unlimitedHeap());
+            net.minecraft.nbt.ListTag palette = root.getList("palette", net.minecraft.nbt.Tag.TAG_COMPOUND);
+            check(!palette.isEmpty(), "empty palette");
+            for (int i = 0; i < palette.size(); i++) {
+                net.minecraft.nbt.CompoundTag entry = palette.getCompound(i);
+                BlockState state = net.minecraft.nbt.NbtUtils.readBlockState(
+                        helper.getLevel().holderLookup(net.minecraft.core.registries.Registries.BLOCK), entry);
+                check(!state.isAir(), "unknown block " + entry);
+                net.minecraft.nbt.CompoundTag written = entry.getCompound("Properties");
+                for (String key : written.getAllKeys()) {
+                    String actual = state.getValues().entrySet().stream()
+                            .filter(e -> e.getKey().getName().equals(key))
+                            .map(e -> net.minecraft.Util.getPropertyName(e.getKey(), e.getValue()))
+                            .findFirst().orElse(null);
+                    check(written.getString(key).equals(actual),
+                            "property " + key + " of " + entry.getString("Name") + " became " + actual);
+                }
+            }
+        } catch (java.io.IOException e) {
+            throw new GameTestAssertException("couldn't read " + path + ": " + e);
+        }
+        helper.succeed();
+    }
+
+    // ---------------------------------------------------------------------------------------------------------
     // Network behaviour
 
     @GameTest(template = EMPTY)

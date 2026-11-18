@@ -8,6 +8,7 @@ import com.simibubi.create.foundation.item.TooltipModifier;
 
 import dev.engine_room.flywheel.lib.visualization.SimpleBlockEntityVisualizer;
 import net.createmod.catnip.lang.FontHelper;
+import net.createmod.ponder.foundation.PonderIndex;
 import net.minecraft.world.item.Item;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -18,6 +19,7 @@ import tech.trowbridge.connectedstorage.client.ItemPumpRenderer;
 import tech.trowbridge.connectedstorage.content.ItemPumpBlockEntity;
 import tech.trowbridge.connectedstorage.index.AddonBlockEntityTypes;
 import tech.trowbridge.connectedstorage.index.AddonBlocks;
+import tech.trowbridge.connectedstorage.ponder.ConnectedStoragePonderPlugin;
 
 @Mod(value = ConnectedStorage.MOD_ID, dist = Dist.CLIENT)
 public class ConnectedStorageClient {
@@ -25,6 +27,7 @@ public class ConnectedStorageClient {
     public ConnectedStorageClient(IEventBus modBus) {
         modBus.addListener(FMLClientSetupEvent.class, ConnectedStorageClient::clientSetup);
         modBus.addListener(EntityRenderersEvent.RegisterRenderers.class, ConnectedStorageClient::registerRenderers);
+        PonderIndex.addPlugin(new ConnectedStoragePonderPlugin());
     }
 
     private static void clientSetup(FMLClientSetupEvent event) {

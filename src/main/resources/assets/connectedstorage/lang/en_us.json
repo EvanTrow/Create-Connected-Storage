@@ -11,5 +11,13 @@
   "block.connectedstorage.item_pump.tooltip.behaviour2": "The storages split apart again. Items stay where they are.",
   "connectedstorage.goggles.pump": "Storage Link:",
   "connectedstorage.goggles.pump.too_slow": "Needs at least %s RPM",
-  "connectedstorage.goggles.pump.reach": "Reach: %s / %s pipe blocks"
+  "connectedstorage.goggles.pump.reach": "Reach: %s / %s pipe blocks",
+  "connectedstorage.ponder.item_pump.header": "Connecting Storage with Item Pumps",
+  "connectedstorage.ponder.item_pump.text_1": "Item Vaults and Item Silos normally keep their items to themselves",
+  "connectedstorage.ponder.item_pump.text_2": "An Item Pump links the storages on both of its ends into one shared inventory",
+  "connectedstorage.ponder.item_pump.text_3": "It needs rotation: drive it with a cogwheel at 16 RPM or faster",
+  "connectedstorage.ponder.item_pump.text_4": "Funnels, chutes and packagers on either storage can now reach the items in both",
+  "connectedstorage.ponder.item_pump.text_5": "Item Pipes carry the link further. A pump reaches 1 pipe block for every 16 RPM, up to 16 blocks",
+  "connectedstorage.ponder.item_pump.text_6": "At 32 RPM it only reaches 2 pipe blocks, so the far vault is left out",
+  "connectedstorage.ponder.item_pump.text_7": "Speed it up, or add another running Item Pump along the line, to reach further"
 }

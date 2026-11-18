@@ -16,6 +16,7 @@ Vaults only merge on their own when they line up into a single rectangular block
 - Pipes connect like Create fluid pipes, with a rim where they meet a storage; both blocks use the vault's slate blue
 - Breaking a pump or pipe splits the storages again with their items intact
 - Sneak + Wrench picks them up
+- Ponder scene (hold W over the Item Pipe or Item Pump) showing how pumps, pipes and pump speed work
 
 Recipes: Fluid Pipe + Andesite Alloy makes 2 Item Pipes; Mechanical Pump + Item Pipe makes an Item Pump.
 
@@ -40,4 +41,5 @@ The textures and block models are generated from Create's fluid pipe and mechani
 ```
 python tools/recolor_pipes.py <path to create jar>
 python tools/gen_assets.py <path to create jar>
+python tools/gen_ponder.py
 ```
