@@ -1,0 +1,7 @@
+{
+  "parent": "create:block/fluid_pipe/rim/north",
+  "textures": {
+    "0": "storagemerger:block/linker_pipes",
+    "particle": "storagemerger:block/linker_pipes"
+  }
+}

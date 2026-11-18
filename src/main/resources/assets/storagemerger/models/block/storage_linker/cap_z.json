@@ -1,0 +1,40 @@
+{
+  "textures": {
+    "0": "storagemerger:block/linker_pipes_connected",
+    "particle": "storagemerger:block/linker_pipes"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        4,
+        4
+      ],
+      "to": [
+        12,
+        12,
+        12
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            10,
+            2,
+            14,
+            6
+          ],
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            10,
+            2,
+            14,
+            6
+          ],
+          "texture": "#0"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "block.storagemerger.storage_linker": "Storage Linker",
+  "block.storagemerger.storage_linker.tooltip.summary": "Merges the _Item Vaults_ and _Item Silos_ it touches into _one shared inventory_. Chain linkers together to join storages that are further apart.",
+  "block.storagemerger.storage_linker.tooltip.condition1": "When placed between storages",
+  "block.storagemerger.storage_linker.tooltip.behaviour1": "Funnels, chutes and packagers on _any_ linked storage can reach _every_ linked storage. Items fill the storage they enter first, then spill over into the rest.",
+  "block.storagemerger.storage_linker.tooltip.condition2": "When removed",
+  "block.storagemerger.storage_linker.tooltip.behaviour2": "The storages split apart again. Items stay where they are."
+}
